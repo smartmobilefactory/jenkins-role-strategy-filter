@@ -8,13 +8,13 @@
 2. Open Tampermokey extension dropdown
 3. Click "create a new script..."
 4. Paste the script content into the editor (replace all content)
-5. Safe the script
+5. Save the script
 6. Go to the jenkins plugin
 7. use the filters :)
 
 # Edit Script
 
-You can easily edit the script in the Tampermokey-Editor or your desired Text-Editor, just edit the script, safe your changes, reload the page and see your changes happening.
+You can easily edit the script in the Tampermokey-Editor or your desired Text-Editor, just edit the script, save your changes, reload the page and see your changes happening.
 
 
 

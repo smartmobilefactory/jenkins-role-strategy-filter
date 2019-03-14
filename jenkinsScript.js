@@ -75,7 +75,11 @@ function main(){
         }      
     }
     //make sure the header row is always shown
-    document.getElementsByClassName('group-row')[1].style.display = ""
+    //document.getElementsByClassName('group-row')[1].style.display = "table-row"
+    var elements = document.getElementsByClassName('group-row');
+    for(var i=0; i<elements.length; i++) { 
+      elements[i].style.display='';
+    }
   }
 
   /**
@@ -177,7 +181,7 @@ function main(){
   document.getElementsByClassName('section-header')[0].innerHTML += '<p style="border-top: 1px solid #c7c7c7; padding-top: 15px;">Filter by User: </p>&nbsp;<input type="text" id="userInputGlob">';
 
   //generate the global role project filter input and append it to the DOM
-  document.getElementsByClassName('section-header')[0].innerHTML += '<p>Filter by Project: </p>&nbsp;<input style="margin-bottom: 15px;" type="text" id="projectInputGlob">';
+  document.getElementsByClassName('section-header')[0].innerHTML += '<p>Filter by Group: </p>&nbsp;<input style="margin-bottom: 15px;" type="text" id="projectInputGlob">';
 
     //listen to events in the global role user input field to call the filter function
   document.querySelector('#userInputGlob').addEventListener('keyup', filterGlobalUsers, false);
@@ -190,7 +194,7 @@ function main(){
   document.getElementsByClassName('section-header')[1].innerHTML += '<p style="border-top: 1px solid #c7c7c7; padding-top: 15px;">Filter by User: </p>&nbsp;<input type="text" id="userInput">';
 
   //generate the project filter input and append it to the DOM
-  document.getElementsByClassName('section-header')[1].innerHTML += '<p>Filter by Project: </p>&nbsp;<input style="margin-bottom: 15px;" type="text" id="projectInput">';
+  document.getElementsByClassName('section-header')[1].innerHTML += '<p>Filter by Group: </p>&nbsp;<input style="margin-bottom: 15px;" type="text" id="projectInput">';
 
   //listen to events in the user input field to call the filter function
   document.querySelector('#userInput').addEventListener('keyup', filterUsers, false);

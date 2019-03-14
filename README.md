@@ -6,11 +6,11 @@
 	- Chrome: (https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=de) 
 	- Firefox: (https://addons.mozilla.org/de/firefox/addon/tampermonkey/)
 2. Open Tampermokey extension dropdown
-3. Click "create a new script..."
+3. Click "Create a new script..."
 4. Paste the script content into the editor (replace all content)
 5. Save the script
-6. Go to the jenkins plugin
-7. use the filters :)
+6. Open the role-strategy page on Jenkins
+7. Use the filters :)
 
 # Edit Script
 

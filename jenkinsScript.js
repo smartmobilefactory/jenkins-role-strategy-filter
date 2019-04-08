@@ -2,7 +2,9 @@
 // @name        jenkins-role-strategy-filter
 // @namespace   smf.jenkins.tools
 // @include     */role-strategy/assign-roles
-// @version     1.0     
+// @version     1.0
+// @downloadURL https://jenkins-role-strategy-filter.solutions.smfhq.com/jenkinsScript.js
+// @updateURL   https://jenkins-role-strategy-filter.solutions.smfhq.com/jenkinsScript.js
 // ==/UserScript==
 
 /*

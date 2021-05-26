@@ -1,0 +1,45 @@
+# Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: deploy-jenkins-role-strategy-filter
+    labels:
+        app: jenkins-role-strategy-filter
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: jenkins-role-strategy-filter
+    template:
+        metadata:
+            labels:
+                app: jenkins-role-strategy-filter
+        spec:
+            containers:
+                - name: webserver
+                  image:  GHCR_IMAGE
+                  ports:
+                      - containerPort: 80
+                    #resources:
+                    #    requests:
+                    #        memory: 256Mi
+                    #        cpu: 1000m
+                    #    limits:
+                    #        memory: 1024Mi
+                    #        cpu: 2000m
+---
+# Service
+apiVersion: v1
+kind: Service
+metadata:
+    name: svc-jenkins-role-strategy-filter
+    labels:
+        app: server
+spec:
+    ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 80
+    selector:
+        app: jenkins-role-strategy-filter
+    type: NodePort
